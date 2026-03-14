@@ -1,0 +1,42 @@
+{
+  "name": "create-odlabs-payload",
+  "version": "1.0.0",
+  "description": "OD Labs White-label Payload CMS template for internal use.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-odlabs-payload": "./bin/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "test": "pnpm run build",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.8.2",
+    "chalk": "^5.4.1",
+    "degit": "^2.8.4",
+    "execa": "^9.6.0",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/degit": "^2.8.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=18.20.2",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@10.17.0"
+}
